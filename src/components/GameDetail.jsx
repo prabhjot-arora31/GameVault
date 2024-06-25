@@ -6,25 +6,39 @@ const GameDetail = ({ individualData, setIsDetailedPage, darkMode }) => {
   }, []);
   return (
     <div style={{ backgroundColor: darkMode ? "black" : "white" }}>
-      <div style={{width:'100%', display:'flex',justifyContent:'center', padding:'0.6rem',backgroundColor:'white', position:'fixed', top:'-6px', border:'1px solid black', paddingTop:'1.4rem' }}>
-      <button
-        onClick={() => {
-          setIsDetailedPage(false);
-        }}
+      <div
         style={{
-          backgroundColor: "purple",
-          color: "white",
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
           padding: "0.6rem",
-        
-          borderRadius: "0.6rem",
+          backgroundColor: darkMode ? "black" : "white",
+          position: "fixed",
+          top: "-6px",
+          border: "1px solid black",
+          borderColor: darkMode ? "white" : "black",
+
+          paddingTop: "1.4rem",
         }}
       >
-        Home
-      </button>
-        </div>
+        <button
+          onClick={() => {
+            setIsDetailedPage(false);
+          }}
+          style={{
+            backgroundColor: "purple",
+            color: "white",
+            padding: "0.6rem",
+
+            borderRadius: "0.6rem",
+          }}
+        >
+          Home
+        </button>
+      </div>
       <h2
         style={{
-          marginTop:'75px',
+          marginTop: "65px",
           marginBottom: "4px",
           fontSize: "35px",
           color: darkMode ? "white" : "black",
@@ -123,7 +137,7 @@ const GameDetail = ({ individualData, setIsDetailedPage, darkMode }) => {
               gap: "0.4rem",
               flexWrap: "wrap",
               width: "350px",
-              alignItems:'center',
+              alignItems: "center",
               marginLeft: "auto",
               marginRight: "auto",
             }}
