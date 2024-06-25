@@ -1,8 +1,8 @@
 import React from "react";
 import img1 from "../assets/rating-removebg-preview.png";
-const GameDetail = ({ individualData, setIsDetailedPage }) => {
+const GameDetail = ({ individualData, setIsDetailedPage, darkMode }) => {
   return (
-    <div>
+    <div style={{ backgroundColor: darkMode ? "black" : "white" }}>
       <button
         onClick={() => {
           setIsDetailedPage(false);
@@ -17,7 +17,13 @@ const GameDetail = ({ individualData, setIsDetailedPage }) => {
       >
         Home
       </button>
-      <h2 style={{ marginBottom: "4px", fontSize: "35px" }}>
+      <h2
+        style={{
+          marginBottom: "4px",
+          fontSize: "35px",
+          color: darkMode ? "white" : "black",
+        }}
+      >
         {individualData.name}
       </h2>
       <div
@@ -37,7 +43,7 @@ const GameDetail = ({ individualData, setIsDetailedPage }) => {
                 padding: "0.3rem",
                 borderRadius: "0.6rem",
                 backgroundColor: "#525252",
-                color: "white",
+                color: darkMode ? "white" : "white",
               }}
             >
               {ele.name}
@@ -62,8 +68,10 @@ const GameDetail = ({ individualData, setIsDetailedPage }) => {
           />
         </div>
         <div>
-          <h4>Released: {individualData.released}</h4>
-          <h4>
+          <h4 style={{ color: darkMode ? "white" : "black" }}>
+            Released: {individualData.released}
+          </h4>
+          <h4 style={{ color: darkMode ? "white" : "black" }}>
             <i class="fa-solid fa-star"></i> &nbsp;
             {individualData.rating} ({individualData.ratings_count})
           </h4>
@@ -94,7 +102,14 @@ const GameDetail = ({ individualData, setIsDetailedPage }) => {
               })}
             </div>
           </div>
-          <h4 style={{ marginBottom: "0.32rem" }}>Tags</h4>
+          <h4
+            style={{
+              marginBottom: "0.32rem",
+              color: darkMode ? "white" : "black",
+            }}
+          >
+            Tags
+          </h4>
           <div
             style={{
               display: "flex",
@@ -135,7 +150,9 @@ const GameDetail = ({ individualData, setIsDetailedPage }) => {
       />
 
       <div>
-        <h2>Available in the following stores:</h2>
+        <h2 style={{ color: darkMode ? "white" : "black" }}>
+          Available in the following stores:
+        </h2>
         <div
           style={{
             display: "flex",
@@ -155,13 +172,14 @@ const GameDetail = ({ individualData, setIsDetailedPage }) => {
                       flexDirection: "column",
                       justifyContent: "center",
                       alignItems: "center",
-
                       border: "2px solid black",
+                      borderColor: darkMode ? "white" : "black",
                       padding: "0.8rem",
                     }}
                   >
                     <h4
                       style={{
+                        color: darkMode ? "white" : "black",
                         textDecoration: "underline",
                         margin: 0,
                         marginBottom: "0.32rem",
@@ -169,10 +187,22 @@ const GameDetail = ({ individualData, setIsDetailedPage }) => {
                     >
                       {ele.store.name}
                     </h4>
-                    <h4 style={{ margin: 0, marginBottom: "0.32rem" }}>
+                    <h4
+                      style={{
+                        margin: 0,
+                        color: darkMode ? "white" : "black",
+                        marginBottom: "0.32rem",
+                      }}
+                    >
                       Domain: {ele.store.domain}
                     </h4>
-                    <h4 style={{ margin: 0, marginBottom: "0.32rem" }}>
+                    <h4
+                      style={{
+                        margin: 0,
+                        color: darkMode ? "white" : "black",
+                        marginBottom: "0.32rem",
+                      }}
+                    >
                       {" "}
                       Total Games: {ele.store.games_count}
                     </h4>
@@ -200,7 +230,7 @@ const GameDetail = ({ individualData, setIsDetailedPage }) => {
         }}
       />
       <div style={{ marginTop: "0.6rem" }}>
-        <h2>Screenshots</h2>
+        <h2 style={{ color: darkMode ? "white" : "black" }}>Screenshots</h2>
         <div
           style={{
             display: "flex",

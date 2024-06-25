@@ -83,50 +83,27 @@ function App() {
             {/* https://api.rawg.io/api/games?key=ade6baffb598415a9e79d4ca7acfa74f&search=gta */}
           </div>
           {/* Theme changer */}
-          {/* <div className="themeChanger">
-            <span
+          <div
+            className="themeChanger"
+            style={{ position: "relative", top: "-40px" }}
+          >
+            <button
               style={{
-                position: "relative",
-                top: "-28px",
-                marginRight: "4px",
+                backgroundColor: darkMode ? "black" : " white",
                 color: darkMode ? "white" : "black",
+                borderColor: darkMode ? "white" : "black",
+              }}
+              onClick={() => {
+                if (darkMode == false) {
+                  setdarkMode(true);
+                } else {
+                  setdarkMode(false);
+                }
               }}
             >
-              Light
-            </span>
-            <label
-              class="toggle-switch"
-              style={{ borderColor: darkMode ? "white" : "black" }}
-            >
-              <input
-                type="checkbox"
-                onClick={() => {
-                  if (darkMode == false) {
-                    setdarkMode(true);
-                  } else {
-                    setdarkMode(false);
-                  }
-                }}
-              />
-              <span
-                class="slider"
-                style={{
-                  transform: darkMode ? "translateX(40px)" : "translateX(0px)",
-                  //  transform: translateX(40px);
-                }}
-              ></span>
-            </label>
-            <span
-              style={{
-                position: "relative",
-                top: "-28px",
-                marginLeft: "4px",
-                color: darkMode ? "white" : "black",
-              }}
-            >
-              Dark
-            </span>
-          </div> */}
+              {darkMode ? "Switch to light mode" : "Switch to dark mode"}
+            </button>
+          </div>
 
           {isLoading ? (
             <img src={LoadingIcon} alt="" />
@@ -156,6 +133,7 @@ function App() {
       ) : (
         <div>
           <GameDetail
+            darkMode={darkMode}
             individualData={individualData}
             setIsDetailedPage={setIsDetailedPage}
           />
