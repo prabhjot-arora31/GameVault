@@ -11,12 +11,15 @@ const GameDetail = ({ individualData, setIsDetailedPage }) => {
           backgroundColor: "purple",
           color: "white",
           padding: "0.6rem",
+          marginTop: "2.4rem",
           borderRadius: "0.6rem",
         }}
       >
         Home
       </button>
-      <h3 style={{ marginBottom: "4px" }}>{individualData.name}</h3>
+      <h2 style={{ marginBottom: "4px", fontSize: "35px" }}>
+        {individualData.name}
+      </h2>
       <div
         style={{
           display: "flex",
@@ -52,10 +55,10 @@ const GameDetail = ({ individualData, setIsDetailedPage }) => {
           flexWrap: "wrap",
         }}
       >
-        <div style={{ width: "550px" }}>
+        <div className="banner">
           <img
             src={`${individualData.background_image}`}
-            style={{ width: "100%" }}
+            style={{ width: "100%", maxWidth: "1200px" }}
           />
         </div>
         <div>
@@ -78,19 +81,20 @@ const GameDetail = ({ individualData, setIsDetailedPage }) => {
                 return (
                   <div
                     style={{
-                      backgroundColor: "#545454",
+                      backgroundColor: "#cbc3e3",
                       padding: "0.6rem",
                       margin: "0.4rem",
+                      color: "grey",
                     }}
                   >
-                    <i class="fa-solid fa-user" style={{ color: "white" }}></i>
-                    <h5 style={{ margin: 0, color: "white" }}>{ele.title}</h5>
+                    <i class="fa-solid fa-user" style={{ color: "grey" }}></i>
+                    <h5 style={{ margin: 0, color: "grey" }}>{ele.title}</h5>
                   </div>
                 );
               })}
             </div>
           </div>
-          <h4>Tags</h4>
+          <h4 style={{ marginBottom: "0.32rem" }}>Tags</h4>
           <div
             style={{
               display: "flex",
@@ -106,10 +110,10 @@ const GameDetail = ({ individualData, setIsDetailedPage }) => {
               return (
                 <h5
                   style={{
-                    backgroundColor: "#545454",
+                    backgroundColor: "#cbc3e3",
                     padding: "0.5rem",
                     borderRadius: "0.6rem",
-                    color: "white",
+                    color: "grey",
                     margin: 0,
                   }}
                 >
@@ -121,8 +125,17 @@ const GameDetail = ({ individualData, setIsDetailedPage }) => {
         </div>
       </div>
 
+      <div
+        style={{
+          width: "300px",
+          height: "1px",
+          margin: "16.5px auto",
+          backgroundColor: "grey",
+        }}
+      />
+
       <div>
-        <h3>Available in following stores:</h3>
+        <h2>Available in the following stores:</h2>
         <div
           style={{
             display: "flex",
@@ -178,9 +191,16 @@ const GameDetail = ({ individualData, setIsDetailedPage }) => {
             })}
         </div>
       </div>
-
+      <div
+        style={{
+          width: "300px",
+          height: ".5px",
+          margin: "26.5px auto",
+          backgroundColor: "grey",
+        }}
+      />
       <div style={{ marginTop: "0.6rem" }}>
-        <h4>Screenshots</h4>
+        <h2>Screenshots</h2>
         <div
           style={{
             display: "flex",
