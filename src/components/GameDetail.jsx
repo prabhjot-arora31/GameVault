@@ -120,6 +120,7 @@ const GameDetail = ({ individualData, setIsDetailedPage, darkMode }) => {
               gap: "0.4rem",
               flexWrap: "wrap",
               width: "350px",
+              alignItems:'center',
               marginLeft: "auto",
               marginRight: "auto",
             }}
