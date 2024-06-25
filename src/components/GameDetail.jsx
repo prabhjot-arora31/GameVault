@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import img1 from "../assets/rating-removebg-preview.png";
 const GameDetail = ({ individualData, setIsDetailedPage, darkMode }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div style={{ backgroundColor: darkMode ? "black" : "white" }}>
       <button

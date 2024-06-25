@@ -26,6 +26,7 @@ const Card = ({ ele, setIsDetailedPage, onDataSend, darkMode }) => {
         onClick={() => {
           setIsDetailedPage(true);
           onDataSend(ele);
+          window.scrollTo(0, 0);
         }}
         style={{
           backgroundColor: "purple",
