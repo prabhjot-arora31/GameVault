@@ -15,7 +15,7 @@ const GameDetail = ({ individualData, setIsDetailedPage, darkMode }) => {
           backgroundColor: "purple",
           color: "white",
           padding: "0.6rem",
-          marginTop: "2.4rem",
+        
           borderRadius: "0.6rem",
         }}
       >
