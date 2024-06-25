@@ -24,7 +24,7 @@ const GameDetail = ({ individualData, setIsDetailedPage, darkMode }) => {
         </div>
       <h2
         style={{
-          marginTop:'60px',
+          marginTop:'75px',
           marginBottom: "4px",
           fontSize: "35px",
           color: darkMode ? "white" : "black",
