@@ -6,7 +6,7 @@ const GameDetail = ({ individualData, setIsDetailedPage, darkMode }) => {
   }, []);
   return (
     <div style={{ backgroundColor: darkMode ? "black" : "white" }}>
-      <div style={{width:'100%', display:'flex',justifyContent:'center', padding:'0.6rem',backgroundColor:'white', position:'fixed', top:'-6px', border:'1px solid black' }}>
+      <div style={{width:'100%', display:'flex',justifyContent:'center', padding:'0.6rem',backgroundColor:'white', position:'fixed', top:'-6px', border:'1px solid black', paddingTop:'1.4rem' }}>
       <button
         onClick={() => {
           setIsDetailedPage(false);
